@@ -4,3 +4,5 @@ data = genDtNasc()
 
 
 print(data)
+
+print(genDtNascMask())
