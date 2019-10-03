@@ -1,4 +1,6 @@
-import gerDados from *
+from genDados import *
+
+data = genDtNasc()
 
 
-print(genDtNasc())
+print(data)

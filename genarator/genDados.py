@@ -51,6 +51,3 @@ def genDtNasc():
             dataGerada = '{}0{}{}'.format(dia, mes, ano)
     
     return dataGerada
-
-
-
