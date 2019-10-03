@@ -1,6 +1,16 @@
 from random import randint
 import datetime
 
+def geradorNome():
+	nomesFemininos = ['Maria','Matilde','Leonor','Mariana','Carolina','Beatriz','Ana','Inês','Lara','Margarida','Sofia','Joana','Francisca','Laura','Madalena','Luana','Diana','Rita','Mafalda','Sara','Bianca','Alice','Eva','Clara','Íris','Constança','Letícia','Mara','Catarina','Gabriela','Marta','Vitória','Yara','Camila','Ariana','Ema','Daniela','Núria','Iara','Rafaela','Benedita','Bruna','Filipa','Júlia','Bárbara','Jéssica','Victória','Carlota','Nicole']
+	nomesMaculinos = ['João','Rodrigo','Martim','Francisco','Santiago','Tomás','Guilherme','Afonso','Gonçalo','Miguel','Duarte','Tiago','Pedro','Gabriel','Diogo','Rafael','Gustavo','Dinis','David','Lucas','Salvador','Simão','José','Daniel','António','Lourenço','André','Diego','Vicente','Manuel','Henrique','Leonardo','Vasco','Bernardo','Mateus','Luís','Eduardo','Leandro','Alexandre','Rúben','Filipe','Ricardo','Samuel','Bruno','Matias','Nuno','Enzo','Rui','Hugo']
+	escolha = randint(0,1)
+	
+	if escolha == 0:
+		nome = nomesFemininos[randint(0,len(nomesFemininos))] + ' Teste'
+	else:
+		nome = nomesMaculinos[randint(0,len(nomesFemininos))] + ' Teste'
+	return nome
 
 def genDtNasc():
     data = datetime.datetime.now()
@@ -51,3 +61,13 @@ def genDtNasc():
             dataGerada = '{}0{}{}'.format(dia, mes, ano)
     
     return dataGerada
+
+def geradorDataNascMascara():
+	dataGerada = geradorDataNasc()
+	
+	if len(dataGerada) <= 8:
+		dataGerada = '{}/{}/{}'.format(dataGerada[:2], dataGerada[2:4], dataGerada[4:8])
+	else:
+		dataGerada = '01/01/1900'	
+	
+	return dataGerada
