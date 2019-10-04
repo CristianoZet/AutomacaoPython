@@ -71,3 +71,14 @@ def genDtNascMask():
 		dataGerada = '01/01/1900'	
 	
 	return dataGerada
+
+def genRg():
+    lista = []
+    rg = ''
+    i = 0 
+    while(i < 8):
+        numero = randint(0,9) 
+        lista.append(numero)
+        rg = rg + str(numero)
+        i = i  + 1 
+    return rg
