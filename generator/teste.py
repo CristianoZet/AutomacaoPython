@@ -6,3 +6,5 @@ data = genDtNasc()
 print(data)
 
 print(genDtNascMask())
+
+print(genRg())
