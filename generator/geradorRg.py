@@ -9,7 +9,7 @@ while(i < 8):
     i = i  + 1 
 
 aux = str(lista).strip('[]')
-aux.strip(',')
+
 
 print(aux.strip(','))    
 
